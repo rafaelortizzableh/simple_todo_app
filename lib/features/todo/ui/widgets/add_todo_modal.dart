@@ -32,52 +32,52 @@ class _AddTodoModalState extends State<AddTodoModal> {
       curve: Curves.decelerate,
       child: Container(
         alignment: Alignment.bottomCenter,
-        height: MediaQuery.of(context).size.height * 0.25,
+        height: MediaQuery.of(context).size.height * 0.33,
         width: MediaQuery.of(context).size.width,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(
-              l10n.newTodo,
+              '${l10n?.newTodo}',
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.subtitle1,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 64),
+              padding: const EdgeInsets.symmetric(horizontal: 32.0),
               child: TextField(
                 autofocus: true,
                 textCapitalization: TextCapitalization.sentences,
                 autocorrect: true,
                 textInputAction: TextInputAction.next,
-                controller: _descriptionController,
-                decoration: InputDecoration(hintText: l10n.todoTitleHint),
+                controller: _titleController,
+                decoration: InputDecoration(hintText: l10n?.todoTitleHint),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 64),
+              padding: const EdgeInsets.symmetric(horizontal: 32.0),
               child: TextField(
                 autofocus: true,
                 textCapitalization: TextCapitalization.sentences,
                 autocorrect: true,
                 controller: _descriptionController,
-                onSubmitted: (text) => Navigator.pop(context, text),
-                decoration: InputDecoration(hintText: l10n.todoDescriptionHint),
+                decoration:
+                    InputDecoration(hintText: l10n?.todoDescriptionHint),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 64),
+              padding: const EdgeInsets.symmetric(horizontal: 32.0),
               child: ElevatedButton.icon(
                 onPressed: () {
                   final newTodo = Todo(
-                    description: _descriptionController.text,
                     title: _titleController.text,
+                    description: _descriptionController.text,
                     done: false,
                   );
                   Navigator.pop(context, newTodo);
                 },
                 icon: const Icon(CupertinoIcons.add_circled_solid),
-                label: Text(l10n.addTodo),
+                label: Text('${l10n?.addTodo}'),
               ),
             ),
           ],

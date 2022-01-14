@@ -10,31 +10,31 @@ class ThemeView extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final _controller = ref.watch(themeControllerProvider.notifier);
-    final _currentThemeMode = ref.watch(themeControllerProvider);
-    final _translations = AppLocalizations.of(context);
+    final controller = ref.watch(themeControllerProvider.notifier);
+    final currentThemeMode = ref.watch(themeControllerProvider);
+    final l10n = AppLocalizations.of(context);
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(_translations.theme),
+        title: Text(l10n?.theme ?? ''),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: DropdownButton<ThemeMode>(
-          value: _currentThemeMode,
-          onChanged: _controller.updateThemeMode,
+          value: currentThemeMode,
+          onChanged: controller.updateThemeMode,
           items: [
             DropdownMenuItem(
               value: ThemeMode.system,
-              child: Text(_translations.systemTheme),
+              child: Text('${l10n?.systemTheme}'),
             ),
             DropdownMenuItem(
               value: ThemeMode.light,
-              child: Text(_translations.lightTheme),
+              child: Text('${l10n?.lightTheme}'),
             ),
             DropdownMenuItem(
               value: ThemeMode.dark,
-              child: Text(_translations.darkTheme),
+              child: Text('${l10n?.darkTheme}'),
             ),
           ],
         ),

@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+import '../../features.dart';
 import 'widgets/wrappers.dart';
 import 'widgets/add_todo_fab.dart';
 
@@ -16,19 +18,25 @@ class TodoView extends StatelessWidget {
     return DefaultTabController(
       length: _tabViewCount,
       child: Builder(builder: (context) {
-        final TabController tabController = DefaultTabController.of(context)!;
+        final tabController = DefaultTabController.of(context)!;
         return Scaffold(
           appBar: AppBar(
-            title: Text(l10n.appTitle),
+            leading: IconButton(
+              icon: const Icon(CupertinoIcons.brightness),
+              onPressed: () =>
+                  Navigator.pushNamed(context, ThemeView.routeName),
+            ),
+            title: Text('${l10n?.appTitle}'),
             bottom: TabBar(
+              indicatorColor: Theme.of(context).colorScheme.secondary,
               tabs: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text('${l10n.todo} 🤓'),
+                  child: Text('${l10n?.todo} 🤓'),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text('${l10n.completed} 👍'),
+                  child: Text('${l10n?.completed} 👍'),
                 ),
               ],
               controller: tabController,

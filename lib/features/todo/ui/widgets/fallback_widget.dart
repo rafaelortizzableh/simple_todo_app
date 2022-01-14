@@ -18,7 +18,7 @@ class _RiveAnimationWidgetState extends State<RiveAnimationWidget> {
   late RiveAnimationController _controller;
   @override
   void initState() {
-    _controller = OneShotAnimation('State Machine 1', autoplay: true);
+    _controller = OneShotAnimation('Example', autoplay: true);
     super.initState();
   }
 
@@ -54,7 +54,9 @@ class FallbackWidget extends StatelessWidget {
         children: [
           RiveAnimationWidget(typeOfTodo: typeOfTodo),
           Text(
-            typeOfTodo == TypeOfTodo.todo ? l10n.noTodosYet : l10n.allTodosDone,
+            typeOfTodo == TypeOfTodo.todo
+                ? '${l10n?.noTodosYet}'
+                : '${l10n?.allTodosDone}',
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.subtitle1,
           ),

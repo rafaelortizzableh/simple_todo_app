@@ -15,6 +15,7 @@ class TodoList extends ConsumerWidget {
     final listOfTodos =
         typeOfTodo == TypeOfTodo.todo ? todoState.todos : todoState.doneItems;
     return ListView.builder(
+        itemCount: listOfTodos.length,
         itemBuilder: (context, index) =>
             TodoListTile(todo: listOfTodos[index]));
   }

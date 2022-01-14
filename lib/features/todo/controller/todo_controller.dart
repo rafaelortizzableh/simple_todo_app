@@ -52,10 +52,11 @@ class TodoController extends StateNotifier<TodoListState> {
     final currentTodos = currentState.todos;
     currentTodos.remove(todo);
     final newEncodedTodos = currentTodos.map((todo) => todo.toJson()).toList();
+    final todoAsDone = todo.copyWith(done: true);
     try {
       await _sharedPreferencesService.updateDoneItemsList([
         ..._sharedPreferencesService.getDoneItemsFromStorage ?? [],
-        todo.toJson()
+        todoAsDone.toJson()
       ]);
       await _sharedPreferencesService.updateTodoList(newEncodedTodos);
     } on Failure catch (e) {

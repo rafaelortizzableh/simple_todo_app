@@ -15,7 +15,7 @@ class TodoApp extends ConsumerWidget {
       builder: (BuildContext context) {
         return MaterialApp(
           restorationScopeId: 'app',
-          title: AppLocalizations.of(context).appTitle,
+          title: AppLocalizations.of(context)?.appTitle ?? 'To-Do App',
           localizationsDelegates: const [
             AppLocalizations.delegate,
             GlobalMaterialLocalizations.delegate,
@@ -24,7 +24,7 @@ class TodoApp extends ConsumerWidget {
           ],
           supportedLocales: AppLocalizations.supportedLocales,
           onGenerateTitle: (BuildContext context) =>
-              AppLocalizations.of(context).appTitle,
+              AppLocalizations.of(context)!.appTitle,
           theme: CustomTheme.lightTheme(),
           darkTheme: CustomTheme.darkTheme(),
           themeMode: ref.watch(themeControllerProvider),

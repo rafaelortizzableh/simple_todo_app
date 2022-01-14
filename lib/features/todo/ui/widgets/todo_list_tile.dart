@@ -13,8 +13,8 @@ class TodoListTile extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Dismissible(
       key: UniqueKey(),
-      onDismissed: (horizontal) {
-        if (todo.done) {
+      onDismissed: (_) {
+        if (!todo.done) {
           ref.read(todoControllerProvider.notifier).markTodoAsDone(todo);
         } else {
           ref
@@ -25,6 +25,10 @@ class TodoListTile extends ConsumerWidget {
       child: ListTile(
           title: Text(
             todo.title,
+            overflow: TextOverflow.ellipsis,
+          ),
+          subtitle: Text(
+            todo.description,
             overflow: TextOverflow.ellipsis,
           ),
           trailing: todo.done

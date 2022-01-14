@@ -78,9 +78,6 @@ class CustomTheme {
         ),
         accentColor: Palette.indigo500,
       ),
-      scaffoldBackgroundColor: Palette.white,
-      appBarTheme: const AppBarTheme(
-          color: Palette.white, foregroundColor: Palette.indigo500),
       textTheme: theme.primaryTextTheme
           .copyWith(
             button: theme.primaryTextTheme.button?.copyWith(
