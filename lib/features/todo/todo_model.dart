@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+enum TypeOfTodo { done, todo }
+
 class Todo {
   final String title;
   final String description;

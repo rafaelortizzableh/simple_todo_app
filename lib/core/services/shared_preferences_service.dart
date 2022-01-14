@@ -1,4 +1,5 @@
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../core.dart';
 
@@ -16,7 +17,10 @@ class SharedPreferencesService {
       bool result = await prefs.setStringList('todos', todos);
       return result;
     } catch (e) {
-      throw Failure(message: 'Could not save todos');
+      final l10n =
+          AppLocalizations.of(AppConstants.navigationKey.currentContext!);
+      throw Failure(
+          message: l10n?.couldNotSaveDoneItems ?? 'Could not save todos');
     }
   }
 
@@ -25,7 +29,10 @@ class SharedPreferencesService {
       bool result = await prefs.setStringList('doneItems', doneItems);
       return result;
     } catch (e) {
-      throw Failure(message: 'Could not save done items');
+      final l10n =
+          AppLocalizations.of(AppConstants.navigationKey.currentContext!);
+      throw Failure(
+          message: l10n?.couldNotSaveDoneItems ?? 'Could not save done items');
     }
   }
 
@@ -33,7 +40,10 @@ class SharedPreferencesService {
     try {
       return await prefs.setString('selectedTheme', theme);
     } catch (e) {
-      throw Failure(message: 'Could not save preferred theme');
+      final l10n =
+          AppLocalizations.of(AppConstants.navigationKey.currentContext!);
+      throw Failure(
+          message: l10n?.couldNotSaveTheme ?? 'Could not save preferred theme');
     }
   }
 }

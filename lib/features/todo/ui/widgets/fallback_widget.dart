@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-enum TypeOfTodo { done, todo }
+import '../../../features.dart';
 
 const _size300 = 300.0;
 

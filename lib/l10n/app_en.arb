@@ -26,7 +26,8 @@
   "todoDescriptionHint": "Type your To-Do description here...",
   "completed": "Completed",
   "couldNotSaveTodos":"Could not save To-do list",
-  "couldNotSaveDoneItems":"Could not save done items",
-  "noTodosYet": "You have no pending To-Do.\nPress the Floating Button to add a new one",
+  "couldNotSaveDoneItems": "Could not save done items",
+  "couldNotSaveTheme": "Could not save theme",
+  "noTodosYet": "You have no pending To-Do.\nPress the Floating Button to add one 👇",
   "allTodosDone": "You have no done items.\nGo eat an 🍎 or some 🍿 or something..."
 }

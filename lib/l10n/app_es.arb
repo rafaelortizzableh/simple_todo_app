@@ -10,9 +10,9 @@
   "todoTitleHint": "Escribe tu título aquí...",
   "todoDescriptionHint": "Escribe tu descripción aquí...",
   "completed": "Completados",
-  "couldNotSave":"No se pudo guardar la lista de To-dos",
-  "couldNotSaveTodos":"No se pudo guardar la lista de To-dos",
-  "couldNotSaveDoneItems":"No se pudo guardar la lista de To-dos completadas",
-  "noTodosYet": "No tienes To-Dos pendientes.\nPulsa el botón para añadir uno nuevo",
-  "allTodosDone": "No tienes To-Dos completados.\nVe y come una 🍎 or algo de 🍿 or lo que sea..."
+  "couldNotSaveTodos":"No se ha podido guardar la lista de To-dos",
+  "couldNotSaveDoneItems":"No se ha podido guardar la lista de To-dos completados",
+  "couldNotSaveTheme": "No se ha podido guardar el tema",
+  "noTodosYet": "No tienes To-Dos pendientes.\nPulsa el botón para añadir uno 👇",
+  "allTodosDone": "No tienes To-Dos completados.\nVe y come una 🍎 o algo de 🍿 o lo que sea..."
 }
