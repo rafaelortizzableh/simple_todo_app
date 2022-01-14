@@ -1,0 +1,32 @@
+{
+  "appTitle": "To-Do App",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "theme": "Theme",
+  "@theme": {
+    "description": "The title of the theme on Theme Appbar"
+  },
+  "systemTheme": "System Theme",
+  "@systemTheme": {
+    "description": "Name of system theme"
+  },
+  "lightTheme": "Light Theme",
+  "@lightTheme": {
+    "description": "Name of light theme"
+  },
+  "darkTheme": "Dark Theme",
+  "@darkTheme": {
+    "description": "Name of dark theme"
+  },
+  "addTodo": "Add To-Do",
+  "newTodo": "New To-Do",
+  "todo": "To-Do",
+  "todoTitleHint": "Type your To-Do title here...",
+  "todoDescriptionHint": "Type your To-Do description here...",
+  "completed": "Completed",
+  "couldNotSaveTodos":"Could not save To-do list",
+  "couldNotSaveDoneItems":"Could not save done items",
+  "noTodosYet": "You have no pending To-Do.\nPress the Floating Button to add a new one",
+  "allTodosDone": "You have no done items.\nGo eat an 🍎 or some 🍿 or something..."
+}
