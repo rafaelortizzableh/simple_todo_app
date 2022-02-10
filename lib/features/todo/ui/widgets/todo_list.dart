@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'fallback_widget.dart';
 import 'todo_list_tile.dart';
 import '../../../features.dart';
 
